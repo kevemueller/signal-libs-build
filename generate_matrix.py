@@ -102,13 +102,13 @@ def cross_template(arch, subarch="", env="gnu", vendor="unknown", sys_os="linux"
 
 build_envs = [
         hosts["linux-gnu"],
-        hosts["macos"],
-        hosts["windows"],
+       # hosts["macos"],
+       # hosts["windows"],
         ### Cross-compiling ###
-        cross_template("aarch64"),
-        cross_template("arm", "v7", "gnueabihf"),
-        cross_template("i686"),
-        hosts["macos"] | {"target": "aarch64-apple-darwin"},
+       # cross_template("aarch64"),
+       # cross_template("arm", "v7", "gnueabihf"),
+       # cross_template("i686"),
+       # hosts["macos"] | {"target": "aarch64-apple-darwin"},
         ### musl ###
         hosts["linux-musl"],
         ]
