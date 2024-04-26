@@ -71,7 +71,7 @@ hosts = {
                 "rust-flags": "-C target-feature=+crt-static",
                     # …-musl target linked statically by default
                     ## alt: use CARGO_CFG_TARGET_FEATURE env var
-                #"cargo-flags": "--target=x86_64-unknown-linux-musl",
+                "cargo-flags": "--target=x86_64-unknown-linux-musl",
                 },
         }
 
