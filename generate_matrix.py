@@ -65,10 +65,10 @@ hosts = {
                 "container": "rust:alpine",
                 "lib-prefix": "lib",
                 "lib-suffix": ".so",
-                "triple": "x86_64-unknown-linux-musl",
+                "triple": "x86_64-static-linux-musl",
                 "install-cmd": "apk update && apk add",
                 "req-pkg": "git bash python3 tar github-cli build-base gcc g++ clang clang-dev cmake make protobuf file openssl",
-                "rust-flags": "-C target-feature=-crt-static",
+                "rust-flags": "-C target-feature=+crt-static",
                     # …-musl target linked statically by default
                     ## alt: use CARGO_CFG_TARGET_FEATURE env var
                 #"cargo-flags": "--target=x86_64-unknown-linux-musl",
