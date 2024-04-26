@@ -65,7 +65,7 @@ hosts = {
                 "container": "rust:alpine",
                 "lib-prefix": "lib",
                 "lib-suffix": ".so",
-                "triple": "x86_64-static-linux-musl",
+                "triple": "x86_64-unknown-linux-musl",
                 "install-cmd": "apk update && apk add",
                 "req-pkg": "git bash python3 tar github-cli build-base gcc g++ clang clang-dev cmake make protobuf file openssl",
                 "rust-flags": "-C target-feature=+crt-static",
@@ -101,7 +101,7 @@ def cross_template(arch, subarch="", env="gnu", vendor="unknown", sys_os="linux"
     return host_dict | cross_dict
 
 build_envs = [
-        hosts["linux-gnu"],
+       # hosts["linux-gnu"],
        # hosts["macos"],
        # hosts["windows"],
         ### Cross-compiling ###
